@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spirit Harmony</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Css/Main.css" />
+    <link rel="stylesheet" href="/Css/progresion.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Spirit Harmony</a></div>
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tone.html">Tone</a></li>
+                <li><a href="tempo.html">Tempo</a></li>
+                <li><a href="genero.html">Genere</a></li>
+                <li><a href="progrecion.html">Progresion de Acordes</a></li>
+                <li><a href="contato.html">Contacto</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Stared</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="dropdown_menu ">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tone.html">Tone</a></li>
+            <li><a href="tempo.html">Tempo</a></li>
+            <li><a href="genero.html">Genere</a></li>
+            <li><a href="progrecion.html">Progresion de Acordes</a></li>
+            <li><a href="contato.html">Contacto</a></li>
+            <li><a href="#" class="action_btn">Get Stared</a></li>
+        </div>
+    </header>
+    <main>
+        <section id="sec-one">
+            <div class="one-div">
+                <a href="#" onclick="progRandom()" id="boton" class="genProgre">Generar Progresion</a>
+                <p id="texto-respuesta"></p>
+            </div>
+            <div class="in">
+                <div class="in-sub1">
+                    <label for="">N-Chords</label>
+                    <select id="miSelect">
+                        <option value="0">Selecciona una opción</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="in-sub2">
+                    <label for="a">Tone</label>
+                    <select name="is" id="miSelect2">
+                        <option value="0">Selecciona una opción</option>
+                        <option value="1">C</option>
+                        <option value="2">C#</option>
+                        <option value="3">D</option>
+                        <option value="4">Eb</option>
+                        <option value="5">E</option>
+                        <option value="6">F</option>
+                        <option value="7">F#</option>
+                        <option value="8">G</option>
+                        <option value="9">G#</option>
+                        <option value="10">A</option>
+                        <option value="11">Bb</option>
+                        <option value="12">B</option>
+                    </select>
+                </div>
+                <div class="in-sub3">
+                    <label for="a">Modo</label>
+                    <select name="is" id="miSelect3">
+                        <option value="0">Selecciona una opción</option>
+                        <option value="1">Major</option>
+                        <option value="2">Minor</option>
+                        <option value="3">Pentatonic</option>
+                        <option value="4">Pentatonic Minor</option>
+                        <option value="5">Blues</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/Js/Main.js"></script>
+    <script src="/Js/Progresion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+[href="genero.html"] {
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 166, 0, 0.856);
+    box-shadow: 0.5px 0.5px 10px orange;
+}
+
+[href="genero.html"]:hover {
+    transition: all 1s ease-in-out;
+    scale: 1.05;
+    border-radius: 20px;
+    background: rgb(255, 166, 0);
+    color: white;
+    transition: all 0.5s ease-out;
+    box-shadow: -0.5px -0.5px 20px #ffffff93;
+}
+
+section .genGenero{
+    font-size: 130%;
+    font-weight: bold;
+    padding: 8px;
+    background: rgba(214, 214, 214, 0.274);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.432);
+    margin-bottom: 10px;
+}
+section .genGenero:hover{
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    background: rgba(250, 181, 90, 0.274);
+    box-shadow: 5px 5px 30px rgba(255, 168, 37, 0.432);
+}
+section .genGenero:active{
+    transition: all 0.2s ease-in-out;
+    scale: 0.95;
+    color: rgb(255, 128, 128);
+    box-shadow: 5px 5px 30px rgba(255, 106, 37, 0.432);
+
+}
+
+#texto-respuesta{
+    font-size: 110%;
+}
+#texto-respuesta:hover{
+    color: orange;
+}
