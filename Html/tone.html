@@ -6,32 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spirit Harmony</title>
+    <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/Css/Main.css">
+    <link rel="stylesheet" href="/Css/Main.css" />
     <link rel="stylesheet" href="/Css/tone.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <nav class="navbar">
-                <div class="logo"><a href="#">Spirit Harmony</a></div>
-                <ul class="links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tone.html">Tone</a></li>
-                    <li><a href="">Tempo</a></li>
-                    <li><a href="">Genere</a></li>
-                    <li><a href="">Progresion de Acordes</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
-                <a href="#" class="action_btn">Get Stared</a>
-                <div class="toggle_btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </nav>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Spirit Harmony</a></div>
+            <ul class="links">
+                <li><a href="index.html" page="one">Inicio</a></li>
+                <li><a href="tone.html">Tone</a></li>
+                <li><a href="">Tempo</a></li>
+                <li><a href="">Genere</a></li>
+                <li><a href="">Progresion de Acordes</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Stared</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </nav>
+        <div class="dropdown_menu ">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="">Tone</a></li>
+            <li><a href="">Tempo</a></li>
+            <li><a href="">Genere</a></li>
+            <li><a href="">Progresion de Acordes</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="#" class="action_btn">Get Stared</a></li>
+        </div>
     </header>
+    <main>
+        <section id="sec-one">
+        <a href="#" onclick="tonoRandom()" id="boton" class="genTone">Generar Tono</a>
+        <p id="texto-respuesta"></p>
+        </section>
+    </main>
+    <script src="/Js/Main.js"></script>
+    <script src="/Js/Tone.js"></script>
 </body>
 
 </html>

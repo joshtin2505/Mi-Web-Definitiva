@@ -1,15 +1,47 @@
 [href="tone.html"] {
-    border: solid 2px orange;
     padding: 5px;
-    border-radius: 10px;
-    color: orange;
+    border-radius: 5px;
+    background: rgba(255, 166, 0, 0.856);
     box-shadow: 0.5px 0.5px 10px orange;
 }
 
 [href="tone.html"]:hover {
-    transition: all 0.5s ease-in-out;
-    background-color: orange;
+    transition: all 1s ease-in-out;
+    scale: 1.05;
+    border-radius: 20px;
+    background: rgb(255, 166, 0);
     color: white;
     transition: all 0.5s ease-out;
-    box-shadow: -0.5px -0.5px 20px #ffffff;
+    box-shadow: -0.5px -0.5px 20px #ffffff93;
+}
+
+section .genTone{
+    font-size: 130%;
+    font-weight: bold;
+    padding: 8px;
+    background: rgba(214, 214, 214, 0.274);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.432);
+    margin-bottom: 10px;
+}
+section .genTone:hover{
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    background: rgba(250, 181, 90, 0.274);
+    box-shadow: 5px 5px 30px rgba(255, 168, 37, 0.432);
+}
+section .genTone:active{
+    transition: all 0.2s ease-in-out;
+    scale: 0.95;
+    color: rgb(255, 128, 128);
+    box-shadow: 5px 5px 30px rgba(255, 106, 37, 0.432);
+
+}
+
+#texto-respuesta{
+    font-size: 110%;
+}
+#texto-respuesta:hover{
+    color: orange;
 }
