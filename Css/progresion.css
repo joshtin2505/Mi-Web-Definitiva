@@ -1,3 +1,4 @@
+/* Estilos del nav */
 [href="progrecion.html"] {
     padding: 5px;
     border-radius: 5px;
@@ -15,6 +16,11 @@
     box-shadow: -0.5px -0.5px 20px #ffffff93;
 }
 
+.one-div{
+    margin-bottom: 100px;
+    position: fixed;
+    
+}
 section .genProgre{
     font-size: 130%;
     font-weight: bold;
@@ -42,16 +48,14 @@ section .genProgre:active{
 }
 
 #texto-respuesta{
+    margin-top: 1rem;
     font-size: 110%;
 }
 #texto-respuesta:hover{
     color: orange;
 }
-.one-div{
-    margin-bottom: 30px;
-    position: fixed;
-    
-}
+
+
 .in-sub1, .in-sub2, .in-sub3{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.219);
@@ -60,6 +64,7 @@ section .genProgre:active{
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 5px 5px 30px rgba(211, 211, 211, 0.575) ;
 }
 label{
     display: block;
