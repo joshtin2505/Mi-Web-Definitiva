@@ -1,0 +1,17 @@
+[page="one"] {
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 166, 0, 0.856);
+    box-shadow: 0.5px 0.5px 10px orange;
+}
+
+[page="one"]:hover {
+    transition: all 1s ease-in-out;
+    scale: 1.05;
+    border-radius: 20px;
+    background: rgb(255, 166, 0);
+    color: white;
+    transition: all 0.5s ease-out;
+    box-shadow: -0.5px -0.5px 20px #ffffff93;
+    
+}

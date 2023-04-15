@@ -142,6 +142,7 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
+    
 }
 
 #sec-one h1 {
@@ -156,12 +157,13 @@ header {
 
 footer{
     position: absolute;
+    bottom: 0;
     box-sizing: border-box;
     background: #4545456c;
     backdrop-filter: blur(5px);
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: white;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -175,10 +177,21 @@ footer .fo-who-page{
     margin: auto;
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 1px 1px 30px rgba(255, 166, 0, 0.164);
 }
 footer .fo-links{
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
+    align-items: center;
+    border-left: solid 1px #454545c7;
+}
+h4{
+    margin:10px;
+    text-shadow: 1px 1px 30px orange;
+    color: #ffe5b5;
+}
+h4:hover{
+    color:#a7834e
 }
 .fo-links ul{
     background: #4545459a;
@@ -186,7 +199,25 @@ footer .fo-links{
     padding: 10px;
     border-radius: 5px;
     margin-right: 5px;
+    box-shadow: 1px 1px 30px rgba(255, 166, 0, 0.164);
+    
 }
+.fo-links ul li a{
+    color: #ffe5b5;
+}
+.fo-links ul li a:hover{
+    transition: all 0.5s ease-in-out;
+    scale: 1.05;
+    color: orange;
+
+}
+.fo-links ul:hover{
+    transition: all 0.5s ease-in-out;
+    scale: 1.05;
+    box-shadow: 1px 1px 30px rgba(255, 166, 0, 0.603);
+    color: orange;
+}
+
 .fo-links{
     margin-right: 20px;
 }
@@ -212,9 +243,49 @@ footer .fo-links{
     }
     
 }
-@media (max-width: 400px){
+@media (max-width: 480px){
     footer{
         display: flex;
         flex-direction: column;
+        padding-top: 10px;
+        padding-bottom:  15px;
+    }
+    footer .fo-links{
+        border-left: none;
+        border-top: solid 1px #454545e1;
+        padding-top: 25px;
+        margin: 0 10px;
+    }
+    #sec-one{
+        height: calc(80vh - 60px);
+
+    }
+
+}
+
+@media (max-width: 300px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom:  15px;
+        width: 100%;
+    }
+    footer .fo-links{
+        border-left: none;
+        border-top: none;
+        right: 0;
+        padding-top: 25px;
+        border-top: solid 1px #454545e1;
+        margin: 0 40px;
+    }
+    .fo-links ul{
+        background: #4545459a;
+        margin: -10px 5px;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 0;
+        box-shadow: 1px 1px 30px rgba(255, 166, 0, 0.164);
+        
     }
 }
