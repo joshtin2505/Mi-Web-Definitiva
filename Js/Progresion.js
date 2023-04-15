@@ -1,51 +1,336 @@
-const c = ['C', 'Cm', 'Csus2', 'Csus4', 'Csus6', 'Csus9', 'C6', 'C7', 'CMaj7', 'Cm7', 'Cdim', 'Caug', 'Cadd6', 'Cadd9', 'Cadd11', 'C6', 'C9', 'C11', 'C13']
-const cSharp = ['C#', 'C#m', 'C#sus2', 'C#sus4', 'C#sus6', 'C#sus9', 'C#6', 'C#7', 'C#Maj7', 'C#m7', 'C#dim', 'C#aug', 'C#add6', 'C#add9', 'C#add11', 'C#6', 'C#9', 'C#11', 'C#13']
-const d = ['D', 'Dm', 'Dsus2', 'Dsus4', 'Dsus6', 'Dsus9', 'D6', 'D7', 'DMaj7', 'Dm7', 'Ddim', 'Daug', 'Dadd6', 'Dadd9', 'Dadd11', 'D6', 'D9', 'D11', 'D13'];
-const eb = ['Eb', 'Ebm', 'Ebsus2', 'Ebsus4', 'Ebsus6', 'Ebsus9', 'Eb6', 'Eb7', 'EbMaj7', 'Ebm7', 'Ebdim', 'Ebaug', 'Ebadd6', 'Ebadd9', 'Ebadd11', 'Eb6', 'Eb9', 'Eb11', 'E13'];
-const e = ['E', 'Em', 'Esus2', 'Esus4', 'Esus6', 'Esus9', 'E6', 'E7', 'EMaj7', 'Em7', 'Edim', 'Eaug', 'Eadd6', 'Eadd9', 'Eadd11', 'E6', 'E9', 'E11', 'E13'];
-const f = ['F', 'Fm', 'Fsus2', 'Fsus4', 'Fsus6', 'Fsus9', 'F6', 'F7', 'FMaj7', 'Fm7', 'Fdim', 'Faug', 'Fadd6', 'Fadd9', 'Fadd11', 'F6', 'F9', 'F11', 'F13'];
-const fSharp = ['F#', 'F#m', 'F#sus2', 'F#sus4', 'F#sus6', 'F#sus9', 'F#6', 'F#7', 'F#Maj7', 'F#m7', 'F#dim', 'F#aug', 'F#add6', 'F#add9', 'F#add11', 'F#6', 'F#9', 'F#11', 'F#13'];
-const g = ['G', 'Gm', 'Gsus2', 'Gsus4', 'Gsus6', 'Gsus9', 'G6', 'G7', 'GMaj7', 'Gm7', 'Gdim', 'Gaug', 'Gadd6', 'Gadd9', 'Gadd11', 'G6', 'G9', 'G11', 'G13'];
-const gSharp = ['G#', 'G#m', 'G#sus2', 'G#sus4', 'G#sus6', 'G#sus9', 'G#6', 'G#7', 'G#Maj7', 'G#m7', 'G#dim', 'G#aug', 'G#add6', 'G#add9', 'G#add11', 'G#6', 'G#9', 'G#11', 'G#13'];
-const a = ['A', 'Am', 'Asus2', 'Asus4', 'Asus6', 'Asus9', 'A6', 'A7', 'AMaj7', 'Am7', 'Adim', 'Aaug', 'Aadd6', 'Aadd9', 'Aadd11', 'A6', 'A9', 'A11', 'A13'];
-const bb = ['Bb', 'Bbm', 'Bbsus2', 'Bbsus4', 'Bbsus6', 'Bbsus9', 'Bb6', 'Bb7', 'BbMaj7', 'Bbm7', 'Bbdim', 'Bbaug', 'Bbadd6', 'Bbadd9', 'Bbadd11', 'Bb6', 'Bb9', 'Bb11', 'Bb13'];
-const b = ['B', 'Bm', 'Bsus2', 'Bsus4', 'Bsus6', 'Bsus9', 'B6', 'B7', 'BMaj7', 'Bm7', 'Bdim', 'Baug', 'Badd6', 'Badd9', 'Badd11', 'B6', 'B9', 'B11', 'B13'];
-function escalaMayor(nacordes,tono){
-    const structreC = [c,d,e,f,g,a,b];
-    const structreCsh = [cSharp,eb,f,fSharp,gSharp,bb,b];
-    const structreD = [d,e,fSharp,g,a,b,cSharp];
-    const structreEb = [e,fSharp,gSharp,a,b,cSharp,eb];
-    const structreF = [f,g,a,bb,c,d,e];
-    const structureFsh = [fSharp,gSharp,bb,b,cSharp,eb,f];
-    const structreG = [g,a,b,c,d,e,fSharp];
-    const structreGsh = [gSharp,bb,c,cSharp,eb,f,g];
-    const structreA = [a,b,cSharp,d,e,fSharp,gSharp];
-    const structreBb = [bb,c,d,eb,f,g,a];
-    const structreB = [b,cSharp,eb,e,fSharp,gSharp,bb];
+const c = ['C', 'Csus2', 'Csus4', 'Csus6', 'Csus9', 'C7', 'CMaj7', 'Cadd6', 'Cadd9', 'Cadd11', 'C6', 'C9', 'C11', 'C13'];
+const cM = ['Cm', 'Cm-sus2', 'Cm-sus4', 'Cm-sus6', 'Cm-sus9', 'Cm7', 'Cm-add6', 'Cm-add9', 'Cm-add11', 'Cm6', 'Cm9', 'Cm11', 'Cm13',""];
+const cDA = ['Cdim', 'Caug'];
+
+const cSharp = ['C#', 'C#sus2', 'C#sus4', 'C#sus6', 'C#sus9', 'C#7', 'C#Maj7', 'C#add6', 'C#add9', 'C#add11', 'C#6', 'C#9', 'C#11', 'C#13'];
+const cSharpM = ['C#m', 'C#m-sus2', 'C#m-sus4', 'C#m-sus6', 'C#m-sus9','C#m7', 'C#m-add6', 'C#m-add9', 'C#m-add11', 'C#m6', 'C#m9', 'C#m11', 'C#m13',""];
+const cSharpDA = ['C#dim', 'C#aug'];
+
+const d = ['D', 'Dsus2', 'Dsus4', 'Dsus6', 'Dsus9', 'D7', 'DMaj7', 'Dadd6', 'Dadd9', 'Dadd11', 'D6', 'D9', 'D11', 'D13'];
+const dM = ['Dm', 'Dm-sus2', 'Dm-sus4', 'Dm-sus6', 'Dm-sus9', 'Dm7', 'Dm-add6', 'Dm-add9', 'Dm-add11', 'Dm6', 'Dm9', 'Dm11', 'Dm13',""];
+const dDA = ['Ddim', 'Daug'];
+
+const eb = ['Eb', 'Ebsus2', 'Ebsus4', 'Ebsus6', 'Ebsus9', 'Eb7', 'EbMaj7', 'Ebadd6', 'Ebadd9', 'Ebadd11', 'Eb6', 'Eb9', 'Eb11', 'Eb13'];
+const ebM = ['Ebm', 'Ebm-sus2', 'Ebm-sus4', 'Ebm-sus6', 'Ebm-sus9', 'Ebm7', 'Ebm-add6', 'Ebm-add9', 'Ebm-add11', 'Ebm6', 'Ebm9', 'Ebm11', 'Ebm13',""];
+const ebDA = ['Ebdim', 'Ebaug'];
+
+const e = ['E', 'Esus2', 'Esus4', 'Esus6', 'Esus9', 'E7', 'EMaj7', 'Eadd6', 'Eadd9', 'Eadd11', 'E6', 'E9', 'E11', 'E13'];
+const eM = ['Em', 'Em-sus2', 'Em-sus4', 'Em-sus6', 'Em-sus9', 'Em7', 'Em-add6', 'Em-add9', 'Em-add11', 'Em6', 'Em9', 'Em11', 'Em13',""];
+const eDA = ['Edim', 'Eaug'];
+
+const f = ['F', 'Fsus2', 'Fsus4', 'Fsus6', 'Fsus9', 'F7', 'FMaj7', 'Fadd6', 'Fadd9', 'Fadd11', 'F6', 'F9', 'F11', 'F13'];
+const fM = ['Fm', 'Fm-sus2', 'Fm-sus4', 'Fm-sus6', 'Fm-sus9', 'Fm7', 'Fm-add6', 'Fm-add9', 'Fm-add11', 'Fm6', 'Fm9', 'Fm11', 'Fm13',""];
+const fDA = ['Fdim', 'Faug'];
+
+const fSharp = ['F#', 'F#sus2', 'F#sus4', 'F#sus6', 'F#sus9', 'F#7', 'F#Maj7', 'F#add6', 'F#add9', 'F#add11', 'F#6', 'F#9', 'F#11', 'F#13'];
+const fSharpM = ['F#m', 'F#m-sus2', 'F#m-sus4', 'F#m-sus6', 'F#m-sus9','F#m7', 'F#m-add6', 'F#m-add9', 'F#m-add11', 'F#m6', 'F#m9', 'F#m11', 'F#m13',""];
+const fSharpDA = ['F#dim', 'F#aug'];
+
+const g = ['G', 'Gsus2', 'Gsus4', 'Gsus6', 'Gsus9', 'G7', 'GMaj7', 'Gadd6', 'Gadd9', 'Gadd11', 'G6', 'G9', 'G11', 'G13'];
+const gM = ['Gm', 'Gm-sus2', 'Gm-sus4', 'Gm-sus6', 'Gm-sus9', 'Gm7', 'Gm-add6', 'Gm-add9', 'Gm-add11', 'Gm6', 'Gm9', 'Gm11', 'Gm13',""];
+const gDA = ['Gdim', 'Gaug'];
+
+const gSharp = ['G#', 'G#sus2', 'G#sus4', 'G#sus6', 'G#sus9', 'G#7', 'G#Maj7', 'G#add6', 'G#add9', 'G#add11', 'G#6', 'G#9', 'G#11', 'G#13'];
+const gSharpM = ['G#m', 'G#m-sus2', 'G#m-sus4', 'G#m-sus6', 'G#m-sus9', 'G#m7', 'G#m-add6', 'G#m-add9', 'G#m-add11', 'G#m6', 'G#m9', 'G#m11', 'G#m13',""];
+const gSharpDA = ['G#dim', 'G#aug'];
+
+const a = ['A', 'Asus2', 'Asus4', 'Asus6', 'Asus9', 'A7', 'AMaj7', 'Aadd6', 'Aadd9', 'Aadd11', 'A6', 'A9', 'A11', 'A13'];
+const aM = ['Am', 'Am-sus2', 'Am-sus4', 'Am-sus6', 'Am-sus9', 'Am7', 'Am-add6', 'Am-add9', 'Am-add11', 'Am6', 'Am9', 'Am11', 'Am13',""];
+const aDA = ['Adim', 'Aaug'];
+
+const bb = ['Bb', 'Bbsus2', 'Bbsus4', 'Bbsus6', 'Bbsus9', 'Bb7', 'BbMaj7', 'Bbadd6', 'Bbadd9', 'Bbadd11', 'Bb6', 'Bb9', 'Bb11', 'Bb13'];
+const bbM = ['Bbm', 'Bbm-sus2', 'Bbm-sus4', 'Bbm-sus6', 'Bbm-sus9', 'Bbm7', 'Bbm-add6', 'Bbm-add9', 'Bbm-add11', 'Bbm6', 'Bbm9', 'Bbm11', 'Bbm13',""];
+const bbDA = ['Bbdim', 'Bbaug'];
+
+const b = ['B', 'Bsus2', 'Bsus4', 'Bsus6', 'Bsus9', 'B7', 'BMaj7', 'Badd6', 'Badd9', 'Badd11', 'B6', 'B9', 'B11', 'B13'];
+const bM = ['Bm', 'Bm-sus2', 'Bm-sus4', 'Bm-sus6', 'Bm-sus9', 'Bm7', 'Bm-add6', 'Bm-add9', 'Bm-add11', 'Bm6', 'Bm9', 'Bm11', 'Bm13',""];
+const bDA = ['Bdim', 'Baug'];
+
+function escalaMayormen(nacordes,tono){
+    const structureC = [c,dM,eM,f,g,aM,bDA];
+    const structureCsh = [cSharp,ebM,fM,fSharp,gSharp,bbM,bDA];
+    const structureD = [d,eM,fSharpM,g,a,bM,cSharpDA];
+    const structureEb = [eb,fM,gM,g,bb,c,dDA]
+    const structureE = [e,fSharpM,gSharpM,a,b,cSharpM,ebDA];
+    const structureF = [f,gM,aM,bb,c,dM,eDA];
+    const structureFsh = [fSharp,gSharpM,bbM,b,cSharp,ebM,fDA];
+    const structureG = [g,aM,bM,c,d,eM,fSharpDA];
+    const structureGsh = [gSharp,bbM,cM,cSharp,eb,fM,gDA];
+    const structureA = [a,bM,cSharpM,d,e,fSharpM,gSharpDA];
+    const structureBb = [bb,cM,dM,eb,f,gM,aDA];
+    const structureB = [b,cSharpM,ebM,e,fSharp,gSharpM,bbDA];
     let concat = "";
     var prog = "";
     let note = 0;
     let chord = 0;
+    if(tono < 100){
+        if(tono == 1){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
 
-    if(tono == 1){
-        for(let i = 0 ; i < nacordes; i++){
-            note = Math.floor(Math.random() * structreA.length)
-            chord = Math.floor(Math.random() * c.length)
-            prog = structreC[note][chord];
-            concat = concat + ' | '+ prog;
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureC[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
         }
-        return concat;
-        console.log(concat)
-    }
-    else if (tono == 2){
-        for(let i = 0 ; i < nacordes; i++){
-            note = Math.floor(Math.random() * structreA.length)
-            chord = Math.floor(Math.random() * c.length)
-            prog = structreCsh[note][chord];
-            concat = concat + ' | '+ prog;
+        else if (tono == 2){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureCsh[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+            
         }
-        return concat;
-        
+        else if (tono == 3){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureD[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+            
+        }
+        else if (tono == 4){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureEb[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+            
+        }
+        else if (tono == 5){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureE[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+        else if (tono == 6){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureF[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+        else if (tono == 7){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureFsh[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+        else if (tono == 8){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureG[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+        else if (tono == 9){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureGsh[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+        else if (tono == 10){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureA[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+        else if (tono == 11){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureBb[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+        else if (tono == 12){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureA.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                if(note === 6 && chord !== 0){
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureA.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureB[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
     }
 }
 function progRandom() {
@@ -169,11 +454,10 @@ function progRandom() {
     console.log("n"+nAcordesEscojidos)
     
 //Primero se toma el tono escojido luego se itera sobre los acordes escojidos en el modo escojido
-    if(modoEscojido == 0) {
-        let retunet = escalaMayor(nAcordesEscojidos,tonoEscojido);
-        let nreturnet = retunet.slice(2);
-        texto_respuesta.innerHTML = nreturnet.trim(); 
-
+    if(modoEscojido == 0 ||modoEscojido == 1) {
+        let retunet = escalaMayormen(nAcordesEscojidos,tonoEscojido);
+        let nreturnet = retunet;
+        texto_respuesta.innerHTML = nreturnet; 
     }
    
 }
