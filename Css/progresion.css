@@ -18,7 +18,7 @@
 
 .one-div{
     margin-bottom: 100px;
-    position: fixed;
+    position: absolute;
     
 }
 section .genProgre{
@@ -99,4 +99,28 @@ select:active{
 
 option{
     text-align: center;
+}
+main{
+    z-index: 1;
+}
+header{
+    z-index: 2;
+}
+
+@media (max-width: 400px) {
+    .in{
+        display: flex;
+        flex-direction: column;
+    }
+    .in-sub1, .in-sub2, .in-sub3{
+        margin: 10px;
+    }
+    .one-div{
+        margin-bottom: 190px;
+    }
+    #texto-respuesta{
+        background: #ffffff49;
+        border-radius: 5px;
+    }
+    
 }

@@ -11,6 +11,7 @@ body {
     background-image: url('/images/backround.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 li {
@@ -153,7 +154,42 @@ header {
     font-weight: bold;
 }
 
-
+footer{
+    position: absolute;
+    box-sizing: border-box;
+    background: #4545456c;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+footer .fo-who-page{
+    background: #4545459a;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+footer .fo-links{
+    display: flex;
+    justify-content:space-between;
+}
+.fo-links ul{
+    background: #4545459a;
+    margin: -10px 5px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.fo-links{
+    margin-right: 20px;
+}
 /* Responsive desing */
 
 @media (max-width: 992px) {
@@ -173,5 +209,12 @@ header {
     .dropdown_menu {
         left: 2rem;
         width: unset;
+    }
+    
+}
+@media (max-width: 400px){
+    footer{
+        display: flex;
+        flex-direction: column;
     }
 }
