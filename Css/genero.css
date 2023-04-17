@@ -14,7 +14,10 @@
     transition: all 0.5s ease-out;
     box-shadow: -0.5px -0.5px 20px #ffffff93;
 }
+#sec-one{
+    height: calc(90.5vh - 60px);
 
+}
 section .genGenero{
     font-size: 130%;
     font-weight: bold;

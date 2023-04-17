@@ -15,3 +15,150 @@
     box-shadow: -0.5px -0.5px 20px #ffffff93;
     
 }
+
+.sec-div-one{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p h{
+    border-top: #cccccc 2px solid;
+    padding: 0 10px;
+}
+
+.sec-div-two{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 120%;
+    background: #1f1f1f;
+    flex-direction: column;
+
+}
+.last-son{
+    margin-top: 20%;
+}
+.sec-div-thr{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.sec-div-thr_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    backdrop-filter: blur(5px);
+}
+
+.sec-div-thr_2{
+    display: flex;
+    background: rgb(240, 240, 240);
+    color: #1f1f1f;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 50%;
+    text-shadow: 1px 1px 30px #1f1f1f;
+}
+.sec-div-thr_2 p{
+    font-weight: bold;
+}
+.sec-div-four{
+    height: 100vh;
+    width: 100%;
+    display: flex; 
+}
+.tuky-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height:100%;
+    width: 50%;
+    background-color: #1f1f1ff1;
+    backdrop-filter: blur(5px);
+}
+.Interact-link{
+    display: flex;
+    margin: 30px;
+    flex-basis: 23%;
+    background: #ffffff3d;
+    border-radius: 20px;
+    backdrop-filter: blur(5px); 
+    overflow: hidden;   
+}
+.Interact-link:first-child{
+   margin-right:0;
+   margin-bottom: 0;
+   background: url('/Images/tone.jpg');
+   background-size: cover;
+   background-position: center;
+   align-items: end;
+}
+.Interact-link_c1{
+    padding: 10px;
+    width: 100%;
+    height:15%;
+    background: #1f1f1fab;
+    backdrop-filter: blur(5px);
+}
+.Interact-link_c1 p{
+    font-size:90%;
+}
+.link1{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/*  */
+.Interact-link:nth-child(2){
+   margin-bottom: 0;
+   background: url('/Images/metrono.jpg');
+   background-size: cover;
+   background-position: center;
+   align-items: end;
+}
+.Interact-link_c2{
+    padding: 10px;
+    width: 100%;
+    height:15%;
+    background: #1f1f1fab;
+    backdrop-filter: blur(5px);
+}
+.Interact-link_c2 p{
+    font-size:90%;
+}
+.link2{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Faltan 2 elementos */
+.Interact-link:nth-child(3){
+    margin-right:0;
+}
+.tuky-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    backdrop-filter: blur(5px);
+}
+x{
+    color: orange;
+}
+footer{
+    border-top: #cccccc 2px solid;
+    bottom: 0;
+}

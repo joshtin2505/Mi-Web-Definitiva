@@ -135,7 +135,7 @@ header {
 /* Main de la Web */
 
 #sec-one {
-    height: calc(100vh - 60px);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,10 +156,9 @@ header {
 }
 
 footer{
-    position: absolute;
-    bottom: 0;
+    
     box-sizing: border-box;
-    background: #4545456c;
+    background: #1f1f1f;
     backdrop-filter: blur(5px);
     width: 100%;
     padding-top: 15px;
