@@ -37,13 +37,18 @@ p h{
     text-align: center;
     width: 100%;
     font-size: 120%;
-    background: #1f1f1f;
+    background: #f0f0f0a8;
+    color: #1f1f1f;
+    font-size: 22px;
+    font-weight: 600;
     flex-direction: column;
-
+    border-top: 2px solid #1f1f1f;
+    border-bottom: 2px solid #1f1f1f;
 }
 .last-son{
     margin-top: 20%;
 }
+/* Esta es la segunda seccion de la pagina */
 .sec-div-thr{
     display: flex;
     height: 100vh;
@@ -51,6 +56,8 @@ p h{
     align-items: center;
     text-align: center;
     width: 100%;
+    border-bottom: 2px solid #1f1f1f;
+
 }
 .sec-div-thr_{
     display: flex;
@@ -63,13 +70,15 @@ p h{
 
 .sec-div-thr_2{
     display: flex;
-    background: rgb(240, 240, 240);
-    color: #1f1f1f;
+    background: #1f1f1f9a;
+    color: #f0f0f0f0;
     justify-content: center;
     align-items: center;
     height:100%;
     width: 50%;
-    text-shadow: 1px 1px 30px #1f1f1f;
+    text-shadow: 1px 1px 30px #9b9b9b;
+    border-left: 2px solid #1f1f1f;
+    
 }
 .sec-div-thr_2 p{
     font-weight: bold;
@@ -78,6 +87,7 @@ p h{
     height: 100vh;
     width: 100%;
     display: flex; 
+
 }
 .tuky-1{
     display: grid;
@@ -85,16 +95,21 @@ p h{
     grid-template-rows: 1fr 1fr;
     height:100%;
     width: 50%;
-    background-color: #1f1f1ff1;
+    background-color: #b8b8b857;
     backdrop-filter: blur(5px);
+    border-right: 2px solid #1f1f1f;
+
 }
+/* son los cuadros */
 .Interact-link{
     display: flex;
     margin: 30px;
     flex-basis: 23%;
-    background: #ffffff3d;
+    background: #ffffffc2;
     border-radius: 20px;
-    backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);
+    width: 80%;
+    height: 80%;
     overflow: hidden;   
 }
 .Interact-link:first-child{
@@ -103,12 +118,20 @@ p h{
    background: url('/Images/tone.jpg');
    background-size: cover;
    background-position: center;
-   align-items: end;
+   transition: 0.5s;
+}
+
+.Interact-link:first-child:hover{
+    scale: 1.05;
+    box-shadow: 10px 10px 30px #1f1f1f98;
 }
 .Interact-link_c1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     width: 100%;
-    height:15%;
+    height:100%;
     background: #1f1f1fab;
     backdrop-filter: blur(5px);
 }
@@ -120,21 +143,29 @@ p h{
     transition: opacity 0.5s ease;
 }
 
-/*  */
+/* Segundo cuadro */
 .Interact-link:nth-child(2){
    margin-bottom: 0;
    background: url('/Images/metrono.jpg');
    background-size: cover;
    background-position: center;
-   align-items: end;
+   transition: 0.5s;
+}
+.Interact-link:nth-child(2):hover{
+    scale: 1.05;
+    box-shadow: 10px 10px 30px #1f1f1f98;
 }
 .Interact-link_c2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     width: 100%;
-    height:15%;
+    height:100%;
     background: #1f1f1fab;
     backdrop-filter: blur(5px);
 }
+
 .Interact-link_c2 p{
     font-size:90%;
 }
@@ -143,10 +174,67 @@ p h{
     transition: opacity 0.5s ease;
 }
 
-/* Faltan 2 elementos */
+/* Tercera caja */
 .Interact-link:nth-child(3){
-    margin-right:0;
+    margin-bottom: 0;
+    background: url('/Images/genero.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
 }
+.Interact-link:nth-child(3):hover{
+    scale: 1.05;
+    box-shadow: 10px 10px 30px #1f1f1f98;
+}
+.Interact-link_c3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height:100%;
+    background: #1f1f1fab;
+    backdrop-filter: blur(5px);
+}
+
+.Interact-link_c3 p{
+    font-size:90%;
+}
+.link3{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+/* cuarta caja */
+.Interact-link:nth-child(4){
+    margin-bottom: 0;
+    background: url('/Images/pexels-jeanpaul-wright-14990223.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+.Interact-link:nth-child(4):hover{
+    scale: 1.05;
+    box-shadow: 10px 10px 30px #1f1f1f98;
+}
+.Interact-link_c4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height:100%;
+    background: #1f1f1fab;
+    backdrop-filter: blur(5px);
+}
+
+.Interact-link_c4 p{
+    font-size:90%;
+}
+.link4{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+/*  */
 .tuky-2{
     display: flex;
     justify-content: center;
@@ -159,6 +247,40 @@ x{
     color: orange;
 }
 footer{
-    border-top: #cccccc 2px solid;
+    border-top: #1f1f1f 2px solid;
     bottom: 0;
+}
+@media screen and (max-width: 500px){
+    .sec-div-thr{
+        display:flex;
+        flex-direction: column;
+    }
+    .sec-div-thr_ , .sec-div-thr_2 , .tuky-1 , .tuky-2{
+        width: 100%;
+    }
+    .sec-div-four{
+        display:flex;
+        flex-direction: column;
+        height: 200vh;
+    }
+
+    .tuky-1{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .tuky-1 a{
+        width: 80%;
+        height: 20%;
+    }
+    .tuky-1 a:first-child{
+        margin-left: 0;
+    }
+    footer{
+        bottom: 0;
+        display: fixed;
+    }
 }

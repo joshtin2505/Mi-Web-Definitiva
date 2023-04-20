@@ -22,3 +22,26 @@ elementoC.addEventListener('mouseover', () => {
   });
 
   //Faltan 2 elementos 
+
+  const elementoE = document.querySelector('.three');
+  const elementoF = document.querySelector('.link3');
+  
+  elementoE.addEventListener('mouseover', () => {
+      elementoF.style.opacity = '1'; /* Muestra el elemento B cuando el mouse está sobre el elemento A */
+    });
+    
+    elementoE.addEventListener('mouseout', () => {
+      elementoF.style.opacity = '0'; /* Oculta el elemento B cuando el mouse sale del elemento A */
+    });
+  
+    //
+  const elementoG = document.querySelector('.four');
+  const elementoH = document.querySelector('.link4');
+  
+  elementoG.addEventListener('mouseover', () => {
+      elementoH.style.opacity = '1'; /* Muestra el elemento B cuando el mouse está sobre el elemento A */
+    });
+    elementoG.addEventListener('mouseout', () => {
+      elementoH.style.opacity = '0'; /* Oculta el elemento B cuando el mouse sale del elemento A */
+    });
+  
