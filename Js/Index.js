@@ -44,4 +44,17 @@ elementoC.addEventListener('mouseover', () => {
     elementoG.addEventListener('mouseout', () => {
       elementoH.style.opacity = '0'; /* Oculta el elemento B cuando el mouse sale del elemento A */
     });
-  
+  //para que se colore de el strong
+  const motivar = document.querySelector('.motivar');
+  const strong = document.querySelector('.text');
+
+  motivar.addEventListener('mouseover', () => {
+    strong.style.color = 'orange'; /* Muestra el elemento B cuando el mouse está sobre el elemento A */
+    strong.style.textDecoration = 'underline'; /* Muestra el elemento B cuando el mouse*/
+
+    });
+    
+    motivar.addEventListener('mouseout', () => {
+      strong.style.color = 'white'; /* Oculta el elemento B cuando el mouse sale del elemento A */
+      strong.style.textDecoration = 'none'; /* Oculta el elemento B cuando el mouse sale del elemento A */
+    });

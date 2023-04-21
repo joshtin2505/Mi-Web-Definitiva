@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif, monospace;
 }
+html{
+    height: 100%;
+}
 
 body {
     height: 100vh;
@@ -145,8 +148,8 @@ header {
     
 }
 
-#sec-one h1 {
-    font-size: 3rem;
+.sec-div-one h1 {
+    font-size: 48px;
     margin-bottom: 1rem;
 }
 
@@ -156,7 +159,7 @@ header {
 }
 
 footer{
-    
+    bottom: 0;
     box-sizing: border-box;
     background: #1f1f1f;
     backdrop-filter: blur(5px);
@@ -247,7 +250,7 @@ h4:hover{
         display: flex;
         flex-direction: column;
         padding-top: 10px;
-        padding-bottom:  15px;
+        padding-bottom:  15px; 
     }
     footer .fo-links{
         border-left: none;
@@ -255,13 +258,13 @@ h4:hover{
         padding-top: 25px;
         margin: 0 10px;
     }
-    #sec-one{
-        height: calc(80vh - 60px);
-
-    }
-
+    
 }
-
+@media (max-width: 325px){
+    .sec-div-one h1{
+        font-size: 36px;
+    }
+}
 @media (max-width: 300px){
     footer{
         display: flex;

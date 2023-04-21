@@ -70,6 +70,7 @@ function escalaMayormen(nacordes,tono){
                 note = Math.floor(Math.random() * structureA.length)
                 //Random En Acorde dentro del tono
                 chord = Math.floor(Math.random() * c.length)
+                //esto es para los disminuidos y los aumentados
                 if(note === 6 && chord !== 0){
                     //bucle
                     do{
@@ -327,6 +328,51 @@ function escalaMayormen(nacordes,tono){
                     }while(note === 6 && chord !== 0)
                 }
                 prog = structureB[note][chord];
+                concat = concat + ' | '+ prog;
+            }
+            return concat.slice(2);
+        }
+    }
+}
+function pentatonic(nacordes,tono) {
+    const structureCpent = [c,dM,eM,g,aM];
+    const structureCshpent = [cSharp,ebM,fM,gSharp,bbM];
+    const structureDpent = [d,eM,fSharpM,a,bM];
+    const structureEbpent = [eb,fM,gM,bb,c];
+    const structureEpent = [e,fSharpM,gSharpM,b,cSharpM];
+    const structureFpent = [f,gM,aM,c,dM];
+    const structureFshpent = [fSharp,gSharpM,bbM,cSharp,ebM];
+    const structureGpent = [g,aM,bM,d,eM];
+    const structureGshpent = [gSharp,bbM,cM,eb,fM];
+    const structureApent = [a,bM,cSharpM,e,fSharpM];
+    const structureBbpent = [bb,cM,dM,f,gM];
+    const structureBpent = [b,cSharpM,ebM,fSharp,gSharpM];
+
+    let concat = "";
+    var prog = "";
+    let note = 0;
+    let chord = 0;
+
+    if(tono < 100){
+        if(tono == 1){
+            for(let i = 0 ; i < nacordes; i++){
+                //Random en Tono
+                note = Math.floor(Math.random() * structureApent.length)
+                //Random En Acorde dentro del tono
+                chord = Math.floor(Math.random() * c.length)
+                //para verificar de que no salgan acordes que tengan notas que no esten dentro del tono
+                if(chord === 0){ //puse un cero por el momento, porque me tego qe ir, este codigo ni siquiera esta empezado, lo copie directamente de la funcion de mayor y menor haci que todavia puede que tenga incongruencias
+                    //bucle
+                    do{
+
+                        //Random en Tono
+                        note = Math.floor(Math.random() * structureApent.length)
+                        //Random En Acorde dentro del tono
+                        chord = Math.floor(Math.random() * c.length)
+
+                    }while(note === 6 && chord !== 0)
+                }
+                prog = structureC[note][chord];
                 concat = concat + ' | '+ prog;
             }
             return concat.slice(2);

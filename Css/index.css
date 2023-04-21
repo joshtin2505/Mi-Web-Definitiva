@@ -24,6 +24,7 @@
     flex-direction: column;
 }
 
+
 p h{
     border-top: #cccccc 2px solid;
     padding: 0 10px;
@@ -100,10 +101,12 @@ p h{
     border-right: 2px solid #1f1f1f;
 
 }
+
 /* son los cuadros */
+
 .Interact-link{
     display: flex;
-    margin: 30px;
+    margin: 15% 10%;
     flex-basis: 23%;
     background: #ffffffc2;
     border-radius: 20px;
@@ -112,9 +115,10 @@ p h{
     height: 80%;
     overflow: hidden;   
 }
+.Interact-link:hover{
+    border: 1px solid #ffffff;
+}
 .Interact-link:first-child{
-   margin-right:0;
-   margin-bottom: 0;
    background: url('/Images/tone.jpg');
    background-size: cover;
    background-position: center;
@@ -145,7 +149,6 @@ p h{
 
 /* Segundo cuadro */
 .Interact-link:nth-child(2){
-   margin-bottom: 0;
    background: url('/Images/metrono.jpg');
    background-size: cover;
    background-position: center;
@@ -176,7 +179,6 @@ p h{
 
 /* Tercera caja */
 .Interact-link:nth-child(3){
-    margin-bottom: 0;
     background: url('/Images/genero.jpg');
     background-size: cover;
     background-position: center;
@@ -206,7 +208,6 @@ p h{
 }
 /* cuarta caja */
 .Interact-link:nth-child(4){
-    margin-bottom: 0;
     background: url('/Images/pexels-jeanpaul-wright-14990223.jpg');
     background-size: cover;
     background-position: center;
@@ -242,13 +243,43 @@ p h{
     height: 100%;
     width: 50%;
     backdrop-filter: blur(5px);
+    overflow: hidden;
 }
+.tuky-2 .motivar{
+    margin: 20%;
+    padding: 5%;
+    border-radius: 10px;
+    backdrop-filter: blur(1px);
+    transition: 0.5s;
+}
+.tuky-2 .motivar:hover{
+    border: 1px solid #999999cc;
+    background: #94949467;
+    backdrop-filter: blur(10px);
+    scale: 1.05;
+}
+
 x{
     color: orange;
 }
 footer{
     border-top: #1f1f1f 2px solid;
     bottom: 0;
+}
+@media screen and (max-width: 836px){
+    .tuky-1 .Interact-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .one,.three{
+        margin-inline: 17px 17px;
+        
+    }
+    .two, .four{
+        margin-inline: 17px 17px;
+    }
+
 }
 @media screen and (max-width: 500px){
     .sec-div-thr{
@@ -263,7 +294,10 @@ footer{
         flex-direction: column;
         height: 200vh;
     }
-
+    .sec-div-thr_2{
+        border-left: 2px solid transparent;
+        border-top: 2px solid #1f1f1f;
+    }
     .tuky-1{
         height: 100%;
         display: flex;
@@ -271,16 +305,23 @@ footer{
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
+        border-right: 2px solid transparent;
+        border-top: 2px solid #1f1f1f;
     }
     .tuky-1 a{
         width: 80%;
         height: 20%;
+        
+    }
+    .tuky-2{
+        height: 120vh;
+        width: 100%;
+        border-top: 2px solid #1f1f1f;
     }
     .tuky-1 a:first-child{
         margin-left: 0;
     }
     footer{
         bottom: 0;
-        display: fixed;
     }
 }
