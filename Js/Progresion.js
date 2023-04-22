@@ -352,7 +352,6 @@ function escalaPentatonic(nacordes,tono) {
     var prog = "";
     let note = 0;
     let chord = 0;
-
     //C
     if(tono == 1){
             for(let i = 0 ; i < nacordes; i++){

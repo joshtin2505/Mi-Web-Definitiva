@@ -264,7 +264,6 @@ x{
 }
 footer{
     border-top: #1f1f1f 2px solid;
-    bottom: 0;
 }
 @media screen and (max-width: 836px){
     .tuky-1 .Interact-link{
