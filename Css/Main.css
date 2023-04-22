@@ -11,7 +11,7 @@ html{
 body {
     height: 100vh;
     background-color: #000;
-    background-image: url('/images/backround.jpg');
+    background-image: url('/Images/backround.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
